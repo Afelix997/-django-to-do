@@ -1,0 +1,9 @@
+<a href="/">Index</a> 
+<a href="/todo/new/">New To Do List Item</a>
+
+<h1>To Do List!</h1>
+<ul>
+    {% for item in context  %}
+    <li>{{item.title}} - {{item.desc}}</li> 
+    {% endfor %}
+</ul>

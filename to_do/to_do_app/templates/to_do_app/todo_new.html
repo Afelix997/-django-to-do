@@ -1,0 +1,11 @@
+<a href="/">Index</a> 
+<a href="/todo/">To Do List</a>
+
+<h1>New To Do Item</h1>
+
+<form action="/todo/" method="POST">
+    {% csrf_token %}
+    <input placeholder="item title" id="title" name = "title"/><br>
+    <input placeholder="item desc" id="desc" name="desc" /><br>
+    <button type="submit">Submit</button>
+</form>
