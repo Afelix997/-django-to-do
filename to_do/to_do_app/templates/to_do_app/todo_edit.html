@@ -1,0 +1,16 @@
+{%extends "to_do_app/layout.html"%}
+
+{%block content%}
+
+
+<a href="/todo/">To Do List</a>
+<h1>Edit</h1>
+
+<form action="/todo/{{item.id}}/edit_/" method="POST">
+    {% csrf_token %}
+    Title<input placeholder="{{item.title}}" id="title" name = "title"/><br>
+    Desc<input placeholder="{{item.desc}}" id="desc" name="desc" /><br>
+    <button type="submit">Submit</button>
+</form>
+
+{%endblock%}

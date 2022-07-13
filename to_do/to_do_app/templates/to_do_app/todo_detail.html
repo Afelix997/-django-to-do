@@ -1,0 +1,18 @@
+{%extends "to_do_app/layout.html"%}
+
+{%block content%}
+
+
+<a href="/">Index</a> 
+<a href="/todo/">To Do List</a>
+
+<h1>{{item.title}} </h1>
+<h3>{{item.desc}}</h3>
+
+<br>
+<a href="/todo/{{item.id}}/edit/">Edit</a>
+<form action="/todo/{{item.id}}/delete/" method="POST">
+    {% csrf_token %}
+    <button id="delete" type="submit" name = 'id' value="{{item.id}}">Delete</button>
+</form>
+{%endblock%}
